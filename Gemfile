@@ -18,6 +18,25 @@ group :development do
   gem 'binding_of_caller'
 end
 
+group :test do
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'database_cleaner'
+  gem 'sqlite3'
+  gem 'webmock'
+  gem 'headless'
+  gem 'rspec-mocks'
+end
+
+group :test, :development do
+  gem 'launchy'
+  gem 'rspec-rails'
+  gem 'factory_girl'
+  gem 'factory_girl_rails'
+end
+
 gem 'jquery-rails'
+gem 'delayed_job_active_record'
 gem 'carrierwave'
 gem 'carrierwave-video'
+gem 'carrierwave_backgrounder'
