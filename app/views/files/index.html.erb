@@ -1,0 +1,14 @@
+<h1>File Uploader and Converter</h1>
+
+<h2>Upload Image: <button type="button">Upload Image</button> &nbsp&nbsp&nbsp&nbsp
+  Upload Video: <button type="button">Upload Video</button></h2>
+
+<% @images.each do |image| %>
+    <p>* <span id="imgName"><%= image.name %>: </span><%= image.file %></p>
+    <hr />
+<% end %>
+
+<% @videos.each do |video| %>
+    <p>- <span id="vidName"><%= video.name %>: </span><%= video.file %></p>
+    <hr />
+<% end %>
