@@ -1,8 +1,15 @@
-<h1>File Uploader and Converter</h1>
+  <div>
+    <h1 class="text-center">File Uploader and Converter</h1>
+  </div>
 
-<h2>Upload Image: <%= link_to "Upload Image", uploads_path(:target => 'image') %> &nbsp&nbsp&nbsp&nbsp
-  Upload Video: <%= link_to "Upload Video", uploads_path(:target => 'video') %></h2>
+  <div class="text-center jumbotron">
+    <h2>Upload Image: <%= link_to "Upload Image", uploads_path(:target => 'image') %> <br />
+      Upload Video: <%= link_to "Upload Video", uploads_path(:target => 'video') %></h2>
+  </div>
 
+  <br/>
+
+  <div>
 <% @images.each do |image| %>
     <p>* <span id="imgName"><%= image.name %>: </span><%= image.file %></p>
     <hr />
@@ -12,3 +19,4 @@
     <p>- <span id="vidName"><%= video.name %>: </span><%= video.file %></p>
     <hr />
 <% end %>
+  </div>
