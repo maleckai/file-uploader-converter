@@ -29,7 +29,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   #
   def scale(width, height)
-    #resize_to_fit(width,height)
+    resize_to_fit(width,height)
   end
 
   # Create different versions of your uploaded files:
