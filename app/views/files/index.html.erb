@@ -1,7 +1,7 @@
 <h1>File Uploader and Converter</h1>
 
-<h2>Upload Image: <button type="button">Upload Image</button> &nbsp&nbsp&nbsp&nbsp
-  Upload Video: <button type="button">Upload Video</button></h2>
+<h2>Upload Image: <%= link_to "Upload Image", uploads_path(:target => 'image') %> &nbsp&nbsp&nbsp&nbsp
+  Upload Video: <%= link_to "Upload Video", uploads_path(:target => 'video') %></h2>
 
 <% @images.each do |image| %>
     <p>* <span id="imgName"><%= image.name %>: </span><%= image.file %></p>

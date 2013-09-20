@@ -1,2 +1,20 @@
-<h1>Upload File</h1>
+<% if @target == 'image' %>
+    <h1>Upload an Image</h1>
 
+    <%= form_for @image, :url => uploads_path do |f| %>
+        <p>
+          <%= f.label :name %><br />
+          <%= f.text_field :name %>
+        </p>
+        <p>
+          <%= f.label :file %>
+          <%= f.file_field :file %>
+        </p>
+        <p><%= f.submit "Upload Image" %></p>
+    <% end %>
+<% end %>
+
+<% if @target == 'video' %>
+    <h1>Upload a Video</h1>
+
+<% end %>
