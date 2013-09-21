@@ -4,9 +4,9 @@ class UploadsController < ApplicationController
 
     if @target == 'image'
       @image = Image.new
-    end
     else
       @video = Video.new
+    end
     end
 
   def create
