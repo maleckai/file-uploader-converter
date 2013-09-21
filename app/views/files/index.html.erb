@@ -20,9 +20,9 @@
     <% @images.each do |image| %>
         <tr>
           <td><%= image.name %>:</td>
-          <td><%= image.file %></td>
+          <td><img src='<%= image.file %>' width='40px'></td>
           <td><%= image.created_at %></td>
-          <td><%= link_to "View", "files/show" %></td>
+          <td><%= link_to 'View', 'files/show?filee='+image.file.to_s+'&typp=image' %></td>
         </tr>
     <% end %>
   </table>
@@ -38,7 +38,7 @@
           <td><%= video.name %>:</td>
           <td><%= video.file %></td>
           <td><%= video.created_at %></td>
-          <td><%= link_to "View", "files/show" %></td>
+          <td><%= link_to "View", 'files/show?filee='+video.file.to_s+'&typp=video' %></td>
         </tr>
     <% end %>
   </table>

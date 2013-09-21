@@ -23,7 +23,7 @@ class VideoUploader < CarrierWave::Uploader::Base
   # end
 
   # process encode_video: [:mp4, callbacks: { after_transcode: :set_success } ]
-  process encode_video: [:mp4, resolution: '640x480']
+   process encode_video: [:mp4, resolution: '640x480']
  # version :mp4 do
    # process encode_video: [:mp4, callbacks: { after_transcode: :set_success } ]
   #end
