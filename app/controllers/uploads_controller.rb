@@ -7,20 +7,18 @@ class UploadsController < ApplicationController
     else
       @video = Video.new
     end
-    end
+  end
 
   def create
     @image = Image.new(params[:image])
     @video = Video.new(params[:video])
     if @image.name != nil
-      if @image.save
-      else
+      if !(@image.save)
         redirect_to files_path, :notice => "Invalid file format."
         return
       end
     else
-      if @video.save
-      else
+      if !(@video.save)
         redirect_to files_path, :notice => "Invalid file format."
         return
       end

@@ -1,6 +1,6 @@
 <h1> View File </h1>
 <% if @type == 'image' %>
-    <img src='<%= @file %>' style="max-width: 640px;" />
+    <img src='<%= @file %>' style="max-width: 640px;"/>
 <% else %>
     <video width="640" controls>
       <source src='<%= @file %>' type="video/mp4">
