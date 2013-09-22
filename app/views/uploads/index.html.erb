@@ -1,32 +1,36 @@
 <% if @target == 'image' %>
     <h1 class='text-center'>Upload an Image</h1>
     <div class="jumbotron">
-    <%= form_for @image, :url => uploads_path do |f| %>
-        <p>
-          <%= f.label :name %><br />
-          <%= f.text_field :name %>
-        </p>
-        <p>
-          <%= f.file_field :file %>
-        </p>
-        <p><%= f.submit 'Upload Image' %></p>
-    <% end %>
+      <%= form_for @image, :url => uploads_path do |f| %>
+          <p>
+            <%= f.label :name %><br/>
+            <%= f.text_field :name %>
+          </p>
+
+          <p>
+            <%= f.file_field :file %>
+          </p>
+
+          <p><%= f.submit 'Upload Image' %></p>
+      <% end %>
     </div>
 <% end %>
 
 <% if @target == 'video' %>
     <h1>Upload a Video</h1>
     <div class="jumbotron">
-    <%= form_for @video, :url => uploads_path do |f| %>
-        <p>
-          <%= f.label :name %><br />
-          <%= f.text_field :name %>
-        </p>
-        <p>
-          <%= f.label :file %>
-          <%= f.file_field :file %>
-        </p>
-        <p><%= f.submit "Upload Video" %></p>
-    <% end %>
+      <%= form_for @video, :url => uploads_path do |f| %>
+          <p>
+            <%= f.label :name %><br/>
+            <%= f.text_field :name %>
+          </p>
+
+          <p>
+            <%= f.label :file %>
+            <%= f.file_field :file %>
+          </p>
+
+          <p><%= f.submit "Upload Video" %></p>
+      <% end %>
     </div>
 <% end %>
