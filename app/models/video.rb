@@ -1,8 +1,5 @@
 class Video < ActiveRecord::Base
-  attr_accessible :name, :file
-
   mount_uploader :file, VideoUploader
 
-
-
+  attr_accessible :name, :file
 end

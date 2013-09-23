@@ -16,6 +16,7 @@ group :development do
   gem 'letter_opener'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'debugger'
 end
 
 group :test do
@@ -40,4 +41,6 @@ gem 'delayed_job_active_record'
 gem 'carrierwave'
 gem 'carrierwave-video'
 gem 'carrierwave_backgrounder'
+gem 'mini_magick'
+gem 'streamio-ffmpeg'
 
