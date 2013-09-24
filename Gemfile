@@ -36,6 +36,10 @@ group :test, :development do
   gem 'factory_girl_rails'
 end
 
+group :production do
+  gem 'mysql2'
+end
+
 gem 'jquery-rails'
 gem 'delayed_job_active_record'
 gem 'carrierwave'
