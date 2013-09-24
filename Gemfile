@@ -43,4 +43,5 @@ gem 'carrierwave-video'
 gem 'carrierwave_backgrounder'
 gem 'mini_magick'
 gem 'streamio-ffmpeg'
+gem 'whenever', :require => false
 
