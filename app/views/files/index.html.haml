@@ -1,0 +1,34 @@
+%div
+  %h1.text-center File Uploader and Converter
+.text-center.jumbotron
+  %h2
+    Upload Image: #{link_to "Upload Image", new_image_path}
+    %br/
+    Upload Video: #{link_to "Upload Video", new_video_path}
+%br/
+%div
+  %h3 Images
+  %table{align: "center", border: "1"}
+    %tr
+      %th Name
+      %th File
+      %th Created
+    - @images.each do |image|
+      %tr
+        %td= "#{image.name}:"
+        %td
+          %img{src: image.file, width: "40px"}/
+        %td= image.created_at
+        %td= link_to 'View', image_path(image)
+  %h3 Videos
+  %table{align: "center", border: "1"}
+    %tr
+      %th Name
+      %th File
+      %th Created
+    - @videos.each do |video|
+      %tr
+        %td= "#{video.name}:"
+        %td= video.file
+        %td= video.created_at
+        %td= link_to "View", video_path(video)

@@ -16,6 +16,7 @@ group :development do
   gem 'letter_opener'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'debugger'
 end
 
 group :test do
@@ -35,8 +36,16 @@ group :test, :development do
   gem 'factory_girl_rails'
 end
 
+group :production do
+  gem 'mysql2'
+end
+
 gem 'jquery-rails'
 gem 'delayed_job_active_record'
 gem 'carrierwave'
 gem 'carrierwave-video'
 gem 'carrierwave_backgrounder'
+gem 'mini_magick'
+gem 'streamio-ffmpeg'
+gem 'whenever', :require => false
+

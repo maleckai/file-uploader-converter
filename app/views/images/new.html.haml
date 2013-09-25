@@ -1,0 +1,10 @@
+%h1.text-center Upload an Image
+.jumbotron
+  = form_for @image do |f|
+    %p
+      = f.label :name
+      %br/
+      = f.text_field :name
+    %p
+      = f.file_field :file
+    %p= f.submit 'Upload Image'
