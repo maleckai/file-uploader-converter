@@ -42,6 +42,7 @@ end
 
 gem 'jquery-rails'
 gem 'delayed_job_active_record'
+gem 'daemons'
 gem 'carrierwave'
 gem 'carrierwave-video'
 gem 'carrierwave_backgrounder'
