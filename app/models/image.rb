@@ -4,7 +4,7 @@ class Image < ActiveRecord::Base
 
   attr_accessible :name, :file, :file_processing
 
-  default_scope order('id DESC')
+  default_scope order('id ASC')
 
   def status
     file_processing? ? "Processing" : "Complete"
