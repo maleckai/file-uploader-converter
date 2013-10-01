@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130918064829) do
+ActiveRecord::Schema.define(:version => 20131001144847) do
 
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "priority",   :default => 0, :null => false
@@ -32,8 +32,9 @@ ActiveRecord::Schema.define(:version => 20130918064829) do
   create_table "images", :force => true do |t|
     t.string   "name"
     t.string   "file"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.boolean  "file_processing"
   end
 
   create_table "videos", :force => true do |t|
