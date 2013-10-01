@@ -1,3 +1,5 @@
+new_image_rows = 1
+
 $(document).on('click', '#upload-image', ->
   addNewImage()
 )
@@ -5,7 +7,7 @@ $(document).on('click', '#upload-image', ->
 addNewImage = () ->
   name = $('#image_name').val()
   $('#image-table').append(
-    "<tr id='new-image-row'>
+    "<tr id='new-image-row-" + new_image_rows + "'>
        <td class='name'><a href='#'>" + name + "</a></td>
        <td>
          <div class='progress progress-striped active'>
@@ -18,7 +20,8 @@ addNewImage = () ->
       <td class='status'>Uploading</td>
     </tr>")
 
-  row = $('#new-image-row')
+  row = $('#new-image-row-' + new_image_rows)
+  new_image_rows++
 
   container = row.find('.progress')
   bar = row.find(".bar")
