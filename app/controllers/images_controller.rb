@@ -1,5 +1,6 @@
 class ImagesController < ApplicationController
   before_filter :find_image, only: [:show, :destroy]
+  respond_to :json, only: :create
 
   def new
     @image = Image.new
@@ -9,7 +10,10 @@ class ImagesController < ApplicationController
     @image = Image.new(params[:image])
 
     if @image.save
-      redirect_to root_path, notice: "The image has successfully uploaded."
+      #respond_to do |format|
+      #  format.html { redirect_to root_path, notice: "The image has successfully uploaded." }
+      #end
+      render :json => { link: image_url(@image), id: @image.id }
     else
       render :new
     end

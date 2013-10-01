@@ -8,16 +8,18 @@
   %table#image-table
     %tr
       %th Name
-      %th File
-      %th Created
-      %th
+      %th Progress
+      %th Status
     - @images.each do |image|
-      %tr
-        %td= image.name
+      %tr{ id: "image-#{image.id}" }
+        %td= link_to image.name, image_path(image)
         %td
-          %img{src: image.file, width: "40px"}/
-        %td= image.created_at
-        %td= link_to 'View', image_path(image)
+          .progress.progress-striped
+            .progress-text
+              100%
+            .bar{ style: "width: 100%;" }
+        %td
+          Complete
   -#%h3 Videos
   -#%table{align: "center", border: "1"}
   -#  %tr

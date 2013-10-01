@@ -14,4 +14,6 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require bootstrap-fileupload
+//= require jquery.remotipart
+//= require jquery.form
 //= require_tree .

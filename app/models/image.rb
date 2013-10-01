@@ -3,4 +3,6 @@ class Image < ActiveRecord::Base
   process_in_background :file
 
   attr_accessible :name, :file
+
+  default_scope order('id DESC')
 end
