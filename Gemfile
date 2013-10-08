@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 
-gem 'sqlite3'
+gem 'mysql2'
 gem 'haml-rails'
 gem 'thin'
 
@@ -34,10 +34,6 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'factory_girl'
   gem 'factory_girl_rails'
-end
-
-group :production do
-  gem 'mysql2'
 end
 
 gem 'jquery-rails'
