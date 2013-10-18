@@ -22,7 +22,7 @@ end
 group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
-  gem 'database_cleaner'
+  gem 'database_cleaner', '<1.1.0'
   gem 'sqlite3'
   gem 'webmock'
   gem 'headless'
