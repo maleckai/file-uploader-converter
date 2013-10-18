@@ -10,9 +10,6 @@ class ImagesController < ApplicationController
     @image = Image.new(params[:image])
 
     if @image.save
-      #respond_to do |format|
-      #  format.html { redirect_to root_path, notice: "The image has successfully uploaded." }
-      #end
       render :json => { link: image_url(@image), id: @image.id }
     else
       render :new

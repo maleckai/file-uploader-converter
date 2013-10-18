@@ -1,5 +1,5 @@
 %div
-  %h1.text-center File Uploader and Converter
+  %h1.text-center Image Uploader and Converter
 #new-image
   %h2{ style: "text-align: center;" } New Image
   = new_image_form
@@ -20,15 +20,3 @@
             .bar{ style: "width: 100%;" }
         %td
           = image.status
-  -#%h3 Videos
-  -#%table{align: "center", border: "1"}
-  -#  %tr
-  -#    %th Name
-  -#    %th File
-  -#    %th Created
-  -#  - @videos.each do |video|
-  -#    %tr
-  -#      %td= "#{video.name}:"
-  -#      %td= video.file
-  -#      %td= video.created_at
-  -#      %td= link_to "View", video_path(video)
