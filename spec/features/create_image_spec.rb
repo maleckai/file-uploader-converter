@@ -18,7 +18,29 @@ describe 'Creating a new image' do
     enter_valid_image_data
     submit_new_image
 
+    sleep 1 # Sleep added to ensure image has finished uploading before performing check
+
     Image.count.should == 1
+  end
+
+  it 'should have the status set to processing until the image has been converted', js: true do
+    enter_valid_image_data
+    submit_new_image
+
+    sleep 1 # Sleep added to ensure image has finished uploading before performing check
+
+    Image.first.status.should == "Processing"
+  end
+
+  it 'should have the status set to complete after the image has been converted', js: true do
+    enter_valid_image_data
+    submit_new_image
+
+    sleep 1 # Sleep added to ensure image has finished uploading before performing check
+
+    work_delayed_jobs
+
+    Image.first.status.should == "Complete"
   end
 
   def enter_valid_image_data
