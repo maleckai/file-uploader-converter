@@ -12,18 +12,19 @@ Please note, the following setup instructions are for Linux (Ubuntu) and will va
 4. Either give the user 'dev' createdb permissions, or create the database and give him permissions to use it
 5. Install nodejs
 
-    $ sudo apt-get install nodejs
+    `sudo apt-get install nodejs`
 
 6. Install imagemagick
 
-    $ sudo apt-get install imagemagick
+    `sudo apt-get install imagemagick`
 
 7. Run `bundle install`    
     
 8. Update the crontab via whenever
 
-    $ whenever --update-crontab file-uploader-converter
-    $ whenever -w
+    `whenever --update-crontab file-uploader-converter`
+    
+    `whenever -w`
 
 9. Run `rake db:setup`
 
