@@ -1,5 +1,0 @@
-Please run the following commands (on Linux) to set up all app specific dependencies:
-sudo apt-get install nodejs
-sudo apt-get install imagemagick
-whenever --update-crontab file-uploader-converter
-whenever -w

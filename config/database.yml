@@ -5,9 +5,9 @@
 #   gem 'sqlite3'
 development:
   adapter: mysql2
-  database: osp_fupload_development
-  username: osp
-  password: ospPi2013
+  database: fupload_dev
+  username: dev
+  password: dev
   pool: 5
   timeout: 5000
 
@@ -22,8 +22,8 @@ test:
 
 production:
   adapter: mysql2
-  database: osp_fupload_production
-  username: osp
-  password: ospPi2013
+  database: fupload_prod
+  username: fupload
+  password: fupload2014
   pool: 5
   timeout: 5000
